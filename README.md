@@ -45,7 +45,9 @@ Please check out how to install `git` for your Linux distribution.
 Commands below provide instructions for Debian-based systems.
 
 To use the bomber type the following commands in Termux:
+
 ```
+pkg up
 pkg install git
 pkg install python
 git clone https://github.com/h656/hbomber.git
