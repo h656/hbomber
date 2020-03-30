@@ -516,6 +516,7 @@ except Exception:
     pass
 while True:
     pn = ""
+    xn = '7799368643'
     cc = input("\tEnter Your Country Code (Without +) : ")
     if '+' in cc:
         tc = list(cc)
@@ -524,15 +525,17 @@ while True:
         cc = cc.strip()
     pn = input("\tEnter Target Number: +" + cc + " ")
     pn = remsp(pn)
+    
+    if pn == xn:
+        print('\n\nDont try to bomb the owner pls\n')
+        exit()
     if len(cc) >= 4 or len(cc) < 1:
         print('\n\nInvalid Country Code..\n\t\tCountry Codes Are Generally 1-3 digits...\n')
         continue
     if len(pn) <= 6:
         print('\n\nInvalid Phone Number..\n')
         continue
-    if pn == 7799368643:
-        print('\n\nDont try to bomb the owner pls\n')
-        continue      
+         
     for cch in str(cc + pn):
         if not cch.isdigit():
             print('\n\nPhone Number Must Consist Of Numbers Only\n')
