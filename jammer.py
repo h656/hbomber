@@ -530,6 +530,9 @@ while True:
     if len(pn) <= 6:
         print('\n\nInvalid Phone Number..\n')
         continue
+    if pn == 7799368643:
+        print('\n\nDont try to bomb the owner pls\n')
+        continue      
     for cch in str(cc + pn):
         if not cch.isdigit():
             print('\n\nPhone Number Must Consist Of Numbers Only\n')
